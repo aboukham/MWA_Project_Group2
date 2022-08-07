@@ -1,0 +1,7 @@
+module.exports.middle = ((err,req,res,next)=>{
+
+    if (!req.body.hasOwnProperty('name') || !req.body.hasOwnProperty('course') || !req.body.hasOwnProperty('grade'))
+    return next(new Error('One of the properties is messing !!'))
+    else 
+        next()
+})

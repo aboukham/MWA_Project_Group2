@@ -1,9 +1,0 @@
-POST http://localhost:4000/users/singup
-
-Content-Type: application/json
-{
-    "name": "adam",
-    "contactNumber": "+15128257026",
-    "email": "adam.kossemtini@gmail.com",
-    "password": "123456"
-}

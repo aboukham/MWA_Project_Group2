@@ -37,13 +37,16 @@ export class LoginComponent implements OnInit {
       email: formData.email,
       password: formData.password
     }
-    this.userService.signup(backEndData).subscribe((response: any)=>{
+    this.userService.login(backEndData).subscribe((response: any)=>{
+
       this.ngxService.stop();
-      this.dialogRef.close();
-      this.responseMessage = response?.message;
-      this.snackBar.openSnackBar(this.responseMessage, "");
-      this.router.navigate(['/']);
+      //this.dialogRef.close();
+      console.log("res:" + response.token)
+      localStorage.setItem('token', response.token)
+      console.log(localStorage.getItem('token'))
+      this.router.navigate(['halal/dashboard']);
     },(error)=>{
+      console.log("er:" + error)
       this.ngxService.stop();
       this.dialogRef.close();
       if (error.error?.message)

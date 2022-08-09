@@ -26,7 +26,6 @@ export class SignupComponent implements OnInit {
       email:[null, [Validators.required, Validators.pattern(GlobalConstants.emailRegex)]],
       phoneNumber:[null, [Validators.required, Validators.pattern(GlobalConstants.phoneNumberRegex)]],
       password:[null, [Validators.required]],
-      confirmPassword: [null, [Validators.required]]
     })
   }
 
@@ -45,6 +44,7 @@ export class SignupComponent implements OnInit {
       this.responseMessage = response?.message;
       this.snackBar.openSnackBar(this.responseMessage, "");
       this.router.navigate(['/']);
+      console.log("signup successfully");
     },(error)=>{
       this.ngxService.stop();
       this.dialogRef.close();

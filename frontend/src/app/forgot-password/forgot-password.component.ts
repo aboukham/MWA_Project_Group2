@@ -33,15 +33,13 @@ export class ForgotPasswordComponent implements OnInit {
     this.ngxService.start();
     const formData = this.forgotPasswordForm.value;
     const backEndData = {
-      email: formData.email,
-      password: formData.password
+      email: formData.email
     }
-    this.userService.signup(backEndData).subscribe((response: any)=>{
+    this.userService.forgotPassword(backEndData).subscribe((response: any)=>{
       this.ngxService.stop();
       this.dialogRef.close();
       this.responseMessage = response?.message;
       this.snackBar.openSnackBar(this.responseMessage, "");
-      this.router.navigate(['/']);
     },(error)=>{
       this.ngxService.stop();
       this.dialogRef.close();

@@ -2,9 +2,9 @@
     <mat-toolbar color="primary" class="topbar telative">
         <div class="navbar-header">
             <button mat-icon-button (click)="snav.toggle()" value="sidebarclosed" style="vertical-align: bottom;">
-                <mat-icon>menu</mat-icon>
+                <mat-icon >menu</mat-icon>
             </button><b>
-                <span style="vertical-align: middle;">
+                <span style="vertical-align: middle;" >
                     <mat-icon>storefront</mat-icon>
                 </span>
             </b>
@@ -18,7 +18,7 @@
     <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
         <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'"
             fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches">
-            <app-sidebar></app-sidebar>
+            <app-sidebar ></app-sidebar>
         </mat-sidenav>
         <mat-sidenav-content class="page-wrapper">
             <div class="page-content">

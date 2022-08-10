@@ -1,0 +1,59 @@
+<mat-toolbar color="primary">
+    <mat-toolbar-row fxLayout="row">
+        <span class="title">{{dialogData.action}} Product</span>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-dialog-content class="mat-content">
+    <form [formGroup]="productForm">
+        <div fxFlex fxLayout="column">
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Name</mat-label>
+                <input matInput formControlName="name" required>
+                <mat-error *ngIf="productForm.controls.name.touched && productForm.controls.name.invalid">
+                    <span *ngIf="productForm.controls.name.errors.required">Sorry, you must enter this field</span>
+                    <span *ngIf="productForm.controls.name.errors.pattern">Sorry, you emtered invalid data</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label> Category Name</mat-label>
+                <input matInput formControlName="categoryName" required>
+                <mat-error *ngIf="productForm.controls.categoryName.touched && productForm.controls.categoryName.invalid">
+                    <span *ngIf="productForm.controls.categoryName.errors.required">Sorry, you must enter this field</span>
+                    <span *ngIf="productForm.controls.categoryName.errors.pattern">Sorry, you emtered invalid data</span>
+                </mat-error>
+            </mat-form-field>
+            
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Description</mat-label>
+                <input matInput formControlName="description" required>
+                <mat-error *ngIf="productForm.controls.description.touched && productForm.controls.description.invalid">
+                    <span *ngIf="productForm.controls.description.errors.required">Sorry, you must enter this field</span>
+                    <span *ngIf="productForm.controls.description.errors.pattern">Sorry, you emtered invalid data</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" required>
+                <mat-error *ngIf="productForm.controls.price.touched && productForm.controls.price.invalid">
+                    <span *ngIf="productForm.controls.price.errors.required">Sorry, you must enter this field</span>
+                    <span *ngIf="productForm.controls.price.errors.pattern">Sorry, you emtered invalid data</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field appearance="fill" fxFlex>
+                <mat-label>Is Halal</mat-label>
+                <input matInput formControlName="isHalal" required>
+                <mat-error *ngIf="productForm.controls.isHalal.touched && productForm.controls.isHalal.invalid">
+                    <span *ngIf="productForm.controls.isHalal.errors.required">Sorry, you must enter this field</span>
+                    <span *ngIf="productForm.controls.isHalal.errors.pattern">Sorry, you emtered invalid data</span>
+                </mat-error>
+            </mat-form-field>
+            <mat-dialog-actions align="center">
+                <button mat-raised-button color="primary" type="submit" (click)="handleSubmit()" 
+                [disabled]="!productForm.valid">{{action}}</button>
+                <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+            </mat-dialog-actions>
+        </div>
+    </form>
+</mat-dialog-content>
+
+

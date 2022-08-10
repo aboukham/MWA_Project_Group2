@@ -36,9 +36,9 @@ export class ChangePasswordComponent implements OnInit {
     this.ngxService.start();
     const formData = this.changePasswordForm.value;
     const backEndData = {
-      oldPassword: formData.name,
-      newPassword: formData.email,
-      confirmPassword: formData.phoneNumber,
+      oldPassword: formData.oldPassword,
+      newPassword: formData.newPassword,
+      confirmPassword: formData.confirmPassword,
     }
     this.userService.changePassword(backEndData).subscribe((response: any)=>{
       this.ngxService.stop();

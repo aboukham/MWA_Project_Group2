@@ -32,6 +32,7 @@ export class UserService {
   }
 
   changePassword(data: any){
+    console.log("hi")
     return this.http.post(this.url + '/users/changePassword', data,  {
       headers: new HttpHeaders().set('content-type', "application/json")
     })

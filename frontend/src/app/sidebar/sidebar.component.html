@@ -1,6 +1,6 @@
 <mat-nav-list appAccordion>
     <mat-list-item appAccordionLink *ngFor="let menuItem of menuItems.getMenuitem()" routerLinkActive="selected" group="{{menuItem.state}}">
-    <a appAccordionToggle [routerLink]="['/halal', menuItem.state]" *ngIf="(menuItem.role === '' || menuItem.role === tokenPayLoad.role)">
+    <a style="background-color:black; width: 100%; color: white;" appAccordionToggle [routerLink]="['/halal', menuItem.state]" *ngIf="(menuItem.role == '' || menuItem.role === tokenPayLoad.role)">
         <mat-icon>{{menuItem.icon}}</mat-icon>
         <span>{{menuItem.name}}</span>
         <span fxFlex></span>

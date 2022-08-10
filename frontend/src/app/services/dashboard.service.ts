@@ -9,9 +9,6 @@ export class DashboardService {
   constructor(private http: HttpClient) { }
 
   getDetails() {
-    const res = this.http.get(this.url + '/details')
-   res.subscribe((r) =>  {
-    console.log(r);})
-    return res;
+   return this.http.get(this.url + '/details')
   }
 }

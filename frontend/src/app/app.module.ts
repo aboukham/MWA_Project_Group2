@@ -19,6 +19,9 @@ import { DashboardComponent } from './dashboard/dashboard.component'
 import { TokenInterceptor } from './services/token.interceptor';
 import { SharedModule } from './shared/shared.module';
 import { HeaderComponent } from './header/header.component';
+import { CategoryComponent } from './material-component/material/dialog/category/category.component';
+import { ManageCategoryComponent } from './material-component/manage-category/manage-category.component';
+import { ManageProductComponent } from './material-component/manage-product/manage-product.component';
 
 const ngxUiLoaderConfig:NgxUiLoaderConfig = {
   text:'loading...',
@@ -44,6 +47,9 @@ const ngxUiLoaderConfig:NgxUiLoaderConfig = {
     FullComponent,
     DashboardComponent,
     HeaderComponent,
+    CategoryComponent,
+    ManageCategoryComponent,
+    ManageProductComponent,
     
   ],
   imports: [

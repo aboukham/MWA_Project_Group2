@@ -13,6 +13,7 @@ import { ViewBillProductsComponent } from './dialog/view-bill-products/view-bill
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ConfirmationComponent } from './dialog/confirmation/confirmation.component';
 import { ChangePasswordComponent } from './dialog/change-password/change-password.component';
+import { ProductComponent } from './dialog/product/product.component';
 
 @NgModule({
   imports: [
@@ -29,7 +30,8 @@ import { ChangePasswordComponent } from './dialog/change-password/change-passwor
   declarations: [
     ViewBillProductsComponent,
     ConfirmationComponent,
-    ChangePasswordComponent
+    ChangePasswordComponent,
+    ProductComponent
   ]
 })
 export class MaterialComponentsModule {}
